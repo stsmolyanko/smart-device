@@ -39,7 +39,7 @@ const js = () => {
 };
 
 const svgo = () => {
-  return gulp.src('source/img/**/*.{svg}')
+  return gulp.src(['!source/img/sprite/**/*.svg', 'source/img/**/*.svg'])
       .pipe(imagemin([
         imagemin.svgo({
             plugins: [
@@ -53,14 +53,14 @@ const svgo = () => {
 };
 
 const sprite = () => {
-  return gulp.src('source/img/sprite/*.svg')
+  return gulp.src('source/img/sprite/**/*.svg')
       .pipe(svgstore({inlineSvg: true}))
-      .pipe(rename('sprite_auto.svg'))
+      .pipe(rename('sprite.svg'))
       .pipe(gulp.dest('build/img'));
 };
 
 const copySvg = () => {
-  return gulp.src('source/img/**/*.svg', {base: 'source'})
+  return gulp.src(['!source/img/sprite/**/*.svg', 'source/img/**/*.svg'], {base: 'source'})
       .pipe(gulp.dest('build'));
 };
 
@@ -88,7 +88,7 @@ const clean = () => {
 const syncServer = () => {
   server.init({
     server: 'build/',
-    index: 'sitemap.html',
+    index: 'index.html',
     notify: false,
     open: true,
     cors: true,

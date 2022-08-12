@@ -1,0 +1,297 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background-color: $color-black;
+
+  @include vp-1023 {
+    padding-bottom: 64px;
+  }
+
+  @include vp-767 {
+    padding-top: 45px;
+    padding-bottom: 37px;
+  }
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+
+  @include vp-1023 {
+    padding: 0 50px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.footer__wrapper-left {
+  margin-right: auto;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin-bottom: 16px;
+  }
+}
+
+.footer__wrapper-left .container {
+  @include vp-1023 {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    margin-bottom: 6px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.footer__social {
+  margin-left: 15px;
+
+  @include vp-1023 {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    margin-top: 0;
+    align-self: center;
+  }
+}
+
+.footer h3 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 17px;
+  margin-top: 3px;
+  color: $color-default-white;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 17px;
+  }
+}
+
+.footer__wrapper-middle {
+  margin-left: 5.7vw;
+  width: 37.5%;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+
+  @include vp-767 {
+    border-top: 1px solid $color-white-70;
+    border-bottom: 1px solid $color-white-70;
+  }
+}
+
+.footer__nav-list {
+  margin: 0;
+  padding: 0;
+  width: 237px;
+  list-style: none;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+
+  &:first-child {
+    @include vp-767 {
+      margin-bottom: -4px;
+    }
+  }
+}
+
+.footer__nav-item {
+  margin-right: 35px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer__nav .container,
+.footer__wrapper-right .container {
+  @media (min-width: $vp-768) {
+    padding: 0;
+  }
+}
+
+.footer__nav .footer__accordion-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--with-js {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.footer__wrapper-right {
+  width: 27.3%;
+  margin-left: auto;
+  margin-right: 31px;
+
+  @include vp-1023 {
+    width: 46%;
+    margin-left: 12.6vw;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-left: 0;
+    border-bottom: 1px solid $color-white-70;
+  }
+}
+
+.footer a,
+.footer address {
+  font-style: normal;
+  color: $color-white-70;
+}
+
+.footer address {
+  margin-bottom: 5px;
+
+  @include vp-767 {
+    margin-top: -5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer__nav-item,
+.footer__phone-item {
+  margin-bottom: 5px;
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.footer__phone-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer__accordion-wrapper {
+  &--with-js {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.footer__accordion-item--active .footer__accordion-wrapper {
+  &--with-js {
+    @include vp-767 {
+      display: block;
+    }
+  }
+}
+
+.footer__acordion-title {
+  position: relative;
+}
+
+.footer__accordion-title--with-icon {
+  cursor: pointer;
+
+  &::before {
+    @include vp-767 {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 94%;
+      width: 14px;
+      height: 1px;
+      background-color: $color-white-70;
+    }
+  }
+
+  &::after {
+    @include vp-767 {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 94%;
+      width: 14px;
+      height: 1px;
+      transform: rotate(90deg);
+      background-color: $color-white-70;
+    }
+  }
+}
+
+.footer__accordion-item--active .footer__accordion-title--with-icon {
+  &::after {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+

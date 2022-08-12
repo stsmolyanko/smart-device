@@ -1,0 +1,103 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding-top: 29px;
+  padding-bottom: 35px;
+  background: $black-to-top;
+
+  @include vp-1023 {
+    position: relative;
+    padding-top: 20px;
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 21px;
+  }
+}
+
+.header .container {
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-1023 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include vp-767 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  flex: 0 1 61%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+
+  @include vp-1023 {
+    margin-left: auto;
+    margin-top: 10px;
+    padding-right: 25px;
+    flex-basis: 272px;
+    justify-content: flex-end;
+    align-self: flex-start;
+
+    & span {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    margin-top: 5px;
+    padding-right: 15px;
+  }
+}
+
+.header__list-item:not(:last-child) {
+  margin-right: 16%;
+
+  @include vp-767 {
+    margin-right: 19%;
+  }
+}
+
+.header__list svg {
+  fill: $color-blue;
+}
+
+.header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+}
+
+.header span {
+  margin-left: 15px;
+}
+
+.header__button {
+  margin-left: auto;
+  margin-right: 62px;
+  flex-shrink: 0;
+
+  @include vp-1023 {
+    display: none;
+  }
+}

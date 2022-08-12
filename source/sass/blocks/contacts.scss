@@ -1,0 +1,258 @@
+.contacts {
+  padding-top: 171px;
+  padding-bottom: 231px;
+  background: linear-gradient(139deg, rgba(2, 101, 147, 1) 33.6%, rgba(0, 179, 255, 1) 31%);
+
+  @include vp-1023 {
+    padding-top: 51px;
+    padding-bottom: 108px;
+    background: $color-blue;
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 83px;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  padding-left: 32.8vw;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    content: "";
+    width: 27vw;
+    max-width: 509px;
+    height: 15vw;
+    max-height: 300px;
+    background-image: url("../img/contacts/contacts-airplane.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  @media (min-width: $vp-1920) {
+    padding-left: 51.6%;
+  }
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
+}
+
+.contacts h2 {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 11px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 9px;
+    font-size: 30px;
+    line-height: 41px;
+  }
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  font-size: 16px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.contacts__form {
+  position: relative;
+  max-width: 580px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-1023 {
+    max-width: 100%;
+  }
+}
+
+.contacts__form input {
+  padding: 17px 16px;
+  margin-bottom: 17px;
+  width: 40%;
+  flex-grow: 1;
+  color: $color-default-white;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-black-15;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  &:first-child {
+    margin-right: 30px;
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts__form textarea {
+  padding: 26px 15px;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 157px;
+  color: $color-default-white;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-black-15;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    padding: 33px 15px;
+  }
+
+  @include vp-767 {
+    height: 182px;
+    padding: 27px 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__form-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.contacts__form-wrapper .button--black {
+  width: 41%;
+  padding: 9px 15px;
+  background-color: $color-black;
+  white-space: pre-line;
+
+  @include vp-1023 {
+    width: 39.5%;
+    flex-grow: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contacts__form-wrapper input[type="checkbox"] {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+  opacity: 0;
+}
+
+.contacts__form-wrapper input[type="checkbox"]:focus-visible + label {
+  outline: 1px solid $color-white;
+}
+
+.contacts__form label {
+  position: relative;
+  width: 49%;
+  margin-top: 15px;
+  padding-left: 45px;
+  color: $color-default-white;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-1023 {
+    margin-top: 0;
+    width: 50.5%;
+    top: -5px;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+  }
+
+  @include vp-767 {
+    padding-left: 32px;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+.contacts__form-wrapper input[type="checkbox"] + label::before {
+  position: absolute;
+  top: 7px;
+  left: 18px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-white;
+  border-radius: 3px;
+
+  @include vp-1023 {
+    top: 22px;
+  }
+
+  @include vp-767 {
+    top: 7px;
+    left: 5px;
+  }
+}
+
+.contacts__form-wrapper input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  top: 9px;
+  left: 23px;
+  content: "";
+  width: 4px;
+  height: 7px;
+  border: 1px solid $color-white;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+
+  @include vp-1023 {
+    top: 24px;
+  }
+
+  @include vp-767 {
+    top: 10px;
+    left: 10px;
+  }
+}

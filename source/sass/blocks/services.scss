@@ -1,0 +1,224 @@
+.services {
+  padding-top: 67px;
+  padding-bottom: 141px;
+  background-color: $color-black;
+
+  @include vp-1023 {
+    padding-top: 57px;
+    padding-bottom: 42px;
+  }
+
+  @include vp-767 {
+    padding-top: 46px;
+    padding-bottom: 54px;
+  }
+}
+
+.services h2 {
+  margin: 0;
+  margin-bottom: 54px;
+  padding: 0;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+    font-size: 28px;
+    line-height: 40px;
+    width: 80%;
+  }
+}
+
+.services__heading-desktop {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.services__heading-mobile {
+  @media (min-width: $vp-768) {
+    display: none;
+  }
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  @include vp-1023 {
+    flex-direction: column;
+  }
+}
+
+.services__item {
+  width: 18.7vw;
+  height: 33.8vw;
+  max-height: 649px;
+  background-color: $color-black;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 4.3vw;
+  }
+
+  &--production {
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/services/services-production-desktop.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-production-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/services/services-production-tablet.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-production-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services/services-production-mobile.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-production-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--mounting {
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/services/services-mounting-desktop.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-mounting-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/services/services-mounting-tablet.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-mounting-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services/services-mounting-mobile.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-mounting-mobile@2x.jpg");
+      }
+    }
+  }
+
+  &--components {
+    @media (min-width: $vp-1024) {
+      background-image: url("../img/services/services-components-desktop.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-components-desktop@2x.jpg");
+      }
+    }
+
+    @include vp-1023 {
+      background-image: url("../img/services/services-components-tablet.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-components-tablet@2x.jpg");
+      }
+    }
+
+    @include vp-767 {
+      background-image: url("../img/services/services-components-mobile.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/services/services-components-mobile@2x.jpg");
+      }
+    }
+  }
+
+  @include vp-1023 {
+    width: 87vw;
+    margin: 0;
+    margin-bottom: 31px;
+    height: 32.5vw;
+  }
+
+  @include vp-767 {
+    width: 84vw;
+    margin: 0;
+    margin-bottom: 31px;
+    height: 78vw;
+  }
+}
+
+.services__item a {
+  position: relative;
+  display: block;
+  padding: 2.4vw 7.5vw 5vw 2vw;
+  width: 100%;
+  height: 100%;
+  color: $color-default-white;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $color-blue;
+    border-radius: 5px 0 0 0;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 25px;
+    right: 27px;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid $color-white;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+
+    @include vp-767 {
+      bottom: 18px;
+      right: 18px;
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+  @include vp-1023 {
+    padding: 4.7vw 62vw 5vw 5.8vw;
+  }
+
+  @include vp-767 {
+    padding: 7.7vw 33vw 5vw 8.8vw;
+    font-size: 18px;
+  }
+}
