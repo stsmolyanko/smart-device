@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {showMoreTextButton} from './modules/more-text-button';
 import {changeTextButton} from './modules/consultation-button';
 import {runAccordion} from './modules/accordion';
+import {initPhoneMask} from './modules/phone-mask';
+
 
 // ---------------------------------
 
@@ -19,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showMoreTextButton();
   changeTextButton();
   runAccordion();
+  initPhoneMask();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
