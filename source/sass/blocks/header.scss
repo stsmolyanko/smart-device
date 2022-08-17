@@ -86,6 +86,10 @@
   justify-content: center;
   align-items: center;
   color: $color-white;
+
+  &:hover {
+    color: $color-white-70;
+  }
 }
 
 .header span {

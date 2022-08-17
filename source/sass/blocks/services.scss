@@ -222,3 +222,7 @@
     font-size: 18px;
   }
 }
+
+.services__item:hover a::before {
+  background-color: $color-blue-hover;
+}

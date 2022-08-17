@@ -850,6 +850,7 @@ button,
   color: #ffffff;
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
 }
 
 .modal__form input[type="checkbox"] {
@@ -918,6 +919,11 @@ button,
   background-color: rgba(255, 255, 255, 0);
 }
 
+.button--transparent-white:hover {
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
 .button--transparent-blue {
   padding: 13px 53px;
   font-size: 14px;
@@ -925,6 +931,11 @@ button,
   color: #00b2ff;
   border: 1px solid #00b2ff;
   background-color: rgba(255, 255, 255, 0);
+}
+
+.button--transparent-blue:hover {
+  background-color: #00b2ff;
+  color: #ffffff;
 }
 
 .button--blue {
@@ -936,6 +947,10 @@ button,
   background-color: #00b2ff;
 }
 
+.button--blue:hover {
+  background-color: #019cde;
+}
+
 .button--black {
   padding: 13px 27px;
   font-size: 16px;
@@ -943,6 +958,10 @@ button,
   line-height: 28px;
   color: #f2f5f6;
   background-color: #041827;
+}
+
+.button--black:hover {
+  background-color: rgba(4, 20, 39, 0.15);
 }
 
 .logo {
@@ -973,6 +992,14 @@ button,
 
 .social__item:not(:last-child) {
   margin-right: 25px;
+}
+
+.social__link svg {
+  fill: #f8fdff;
+}
+
+.social__item:hover .social__link svg {
+  fill: #00b2ff;
 }
 
 .header {
@@ -1045,6 +1072,10 @@ button,
   -ms-flex-align: center;
   align-items: center;
   color: #f2f5f6;
+}
+
+.header a:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .header span {
@@ -1297,6 +1328,10 @@ button,
   transform: rotate(45deg);
 }
 
+.services__item:hover a::before {
+  background-color: #019cde;
+}
+
 .contacts {
   padding-top: 171px;
   padding-bottom: 231px;
@@ -1438,6 +1473,10 @@ button,
   white-space: pre-line;
 }
 
+.contacts__form-wrapper .button--black:hover {
+  background-color: rgba(4, 20, 39, 0.15);
+}
+
 .contacts__form-wrapper input[type="checkbox"] {
   position: absolute;
   top: 28px;
@@ -1457,6 +1496,7 @@ button,
   color: #ffffff;
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
 }
 
 .contacts__form-wrapper input[type="checkbox"] + label::before {
@@ -1578,6 +1618,10 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
+.footer a:hover {
+  color: #f2f5f6;
+}
+
 .footer address {
   margin-bottom: 5px;
 }
@@ -1600,10 +1644,6 @@ button,
 
 .footer__acordion-title {
   position: relative;
-}
-
-.footer__accordion-title--with-icon {
-  cursor: pointer;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2269,6 +2309,10 @@ button,
 
   .footer__accordion-item--active .footer__accordion-wrapper--with-js {
     display: block;
+  }
+
+  .footer__accordion-title--with-icon {
+    cursor: pointer;
   }
 
   .footer__accordion-title--with-icon::before {

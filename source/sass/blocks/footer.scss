@@ -199,6 +199,10 @@
   color: $color-white-70;
 }
 
+.footer a:hover {
+  color: $color-white;
+}
+
 .footer address {
   margin-bottom: 5px;
 
@@ -259,7 +263,9 @@
 }
 
 .footer__accordion-title--with-icon {
-  cursor: pointer;
+  @include vp-767 {
+    cursor: pointer;
+  }
 
   &::before {
     @include vp-767 {

@@ -9,3 +9,11 @@
 .social__item:not(:last-child) {
   margin-right: 25px;
 }
+
+.social__link svg {
+  fill: $color-white-alice;
+}
+
+.social__item:hover .social__link svg {
+  fill: $color-blue;
+}
