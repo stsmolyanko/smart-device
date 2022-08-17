@@ -84,9 +84,6 @@ export class Modals {
     }
 
     this.open();
-
-    const modalInput = document.getElementById('modal__input-name');
-    modalInput.focus();
   }
 
   _documentKeydownHandler(evt) {
