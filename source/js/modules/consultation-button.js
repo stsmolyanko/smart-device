@@ -1,6 +1,6 @@
 const consultButton = document.querySelector('.button--blue');
 
-const changeButtonText = () => {
+const changeTextButton = () => {
   if (document.documentElement.clientWidth <= 767) {
     consultButton.innerText = 'бесплатная консультация';
   } else {
@@ -9,7 +9,7 @@ const changeButtonText = () => {
 };
 
 window.addEventListener('resize', () => {
-  changeButtonText();
+  changeTextButton();
 });
 
-export {changeButtonText};
+export {changeTextButton};

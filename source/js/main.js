@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {moreButton} from './modules/more-button';
-import {changeButtonText} from './modules/consultation-button';
+import {showMoreTextButton} from './modules/more-text-button';
+import {changeTextButton} from './modules/consultation-button';
 import {runAccordion} from './modules/accordion';
 
 // ---------------------------------
@@ -16,12 +16,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  moreButton();
-  changeButtonText();
+  showMoreTextButton();
+  changeTextButton();
   runAccordion();
 
-  const input = document.getElementById('modal__input-name');
-  input.focus();
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -3,7 +3,7 @@ const hiddenText = document.querySelectorAll('.about__text--hidden');
 const componentsText = document.querySelector('.about__text--components');
 
 
-const moreButton = () => {
+const showMoreTextButton = () => {
   aboutButton.addEventListener('click', () => {
     hiddenText.forEach((elem) => {
       elem.classList.toggle('visually-hidden');
@@ -20,4 +20,4 @@ const moreButton = () => {
   });
 };
 
-export {moreButton};
+export {showMoreTextButton};

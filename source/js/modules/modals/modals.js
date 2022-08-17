@@ -84,6 +84,9 @@ export class Modals {
     }
 
     this.open();
+
+    const modalInput = document.getElementById('modal__input-name');
+    modalInput.focus();
   }
 
   _documentKeydownHandler(evt) {
@@ -168,6 +171,7 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      document.getElementById('modal__input-name').focus();
     }, this._eventTimeout);
   }
 
