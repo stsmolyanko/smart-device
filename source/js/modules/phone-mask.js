@@ -10,6 +10,6 @@ const initPhoneMask = () => {
   phoneInput.forEach((item) => {
     IMask(item, maskOptions);
   });
-}
+};
 
 export {initPhoneMask};
