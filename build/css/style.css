@@ -419,7 +419,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100%;
 }
 
 html {
@@ -437,8 +437,20 @@ html {
 
 body {
   width: 100%;
-  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: #ffffff;
+}
+
+body main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 a {
@@ -908,6 +920,10 @@ button,
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button--transparent-white {
@@ -981,9 +997,12 @@ button,
 .social {
   margin: 0;
   padding: 0;
+  max-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -992,6 +1011,7 @@ button,
 
 .social__item:not(:last-child) {
   margin-right: 25px;
+  margin-bottom: 5px;
 }
 
 .social__link svg {
@@ -1029,7 +1049,7 @@ button,
 .header__logo {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-right: auto;
+  margin-right: 13%;
 }
 
 .header__list {
@@ -1045,16 +1065,13 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
 }
 
 .header__list-item:not(:last-child) {
-  margin-right: 16%;
+  margin-right: 20%;
 }
 
 .header__list svg {
@@ -1087,6 +1104,7 @@ button,
   margin-right: 62px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  max-width: 250px;
 }
 
 .promo {
@@ -1267,32 +1285,30 @@ button,
 .services__list {
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  list-style: none;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (28.7%)[3];
+  grid-template-columns: repeat(3, 28.7%);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  -webkit-column-gap: 6.95%;
+  -moz-column-gap: 6.95%;
+  column-gap: 6.95%;
+  row-gap: 75px;
 }
 
 .services__item {
-  width: 18.7vw;
-  height: 33.8vw;
-  max-height: 649px;
+  min-height: 650px;
   background-color: #041827;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.services__item:not(:nth-child(3n)) {
-  margin-right: 4.3vw;
-}
-
 .services__item a {
   position: relative;
   display: block;
-  padding: 2.4vw 7.5vw 5vw 2vw;
+  padding: 46px 137px 60px 40px;
   width: 100%;
   height: 100%;
   color: #ffffff;
@@ -1481,6 +1497,7 @@ button,
   position: absolute;
   top: 28px;
   right: 34px;
+  margin-bottom: 0;
   opacity: 0;
 }
 
@@ -1491,6 +1508,8 @@ button,
 .contacts__form label {
   position: relative;
   width: 49%;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   margin-top: 15px;
   padding-left: 45px;
   color: #ffffff;
@@ -1790,7 +1809,7 @@ button,
 
   .services {
     padding-top: 57px;
-    padding-bottom: 42px;
+    padding-bottom: 75px;
   }
 
   .services h2 {
@@ -1798,10 +1817,9 @@ button,
   }
 
   .services__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    row-gap: 30px;
   }
 
   .services__item--production {
@@ -1817,14 +1835,11 @@ button,
   }
 
   .services__item {
-    width: 87vw;
-    margin: 0;
-    margin-bottom: 31px;
-    height: 32.5vw;
+    min-height: 250px;
   }
 
   .services__item a {
-    padding: 4.7vw 62vw 5vw 5.8vw;
+    padding: 37px 71% 60px 46px;
   }
 
   .contacts {
@@ -2039,13 +2054,14 @@ button,
   .features__list {
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
-    -ms-grid-rows: (1fr)[4];
-    grid-template-rows: repeat(4, 1fr);
+    -ms-grid-rows: (auto)[4];
+    grid-template-rows: repeat(4, auto);
     row-gap: 30px;
   }
 
   .features__item {
-    padding: 29px 25px 54px;
+    min-height: 325px;
+    padding: 29px 25px 72px;
   }
 
   .features__item svg {
@@ -2098,7 +2114,7 @@ button,
 
   .services {
     padding-top: 46px;
-    padding-bottom: 54px;
+    padding-bottom: 86px;
   }
 
   .services h2 {
@@ -2124,13 +2140,6 @@ button,
     background-image: url("../img/services/services-components-mobile.jpg");
   }
 
-  .services__item {
-    width: 84vw;
-    margin: 0;
-    margin-bottom: 31px;
-    height: 78vw;
-  }
-
   .services__item a::before {
     width: 40px;
     height: 40px;
@@ -2144,7 +2153,7 @@ button,
   }
 
   .services__item a {
-    padding: 7.7vw 33vw 5vw 8.8vw;
+    padding: 26px 39% 60px 30px;
     font-size: 18px;
   }
 
@@ -2220,7 +2229,7 @@ button,
   }
 
   .footer__wrapper-left {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 
   .footer__wrapper-left .container {
@@ -2248,8 +2257,10 @@ button,
 
   .footer h3 {
     width: 100%;
-    margin-top: 18px;
-    margin-bottom: 17px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .footer__wrapper-middle {
@@ -2318,7 +2329,7 @@ button,
   .footer__accordion-title--with-icon::before {
     content: "";
     position: absolute;
-    top: 9px;
+    top: 27px;
     left: 94%;
     width: 14px;
     height: 1px;
@@ -2328,7 +2339,7 @@ button,
   .footer__accordion-title--with-icon::after {
     content: "";
     position: absolute;
-    top: 9px;
+    top: 27px;
     left: 94%;
     width: 14px;
     height: 1px;

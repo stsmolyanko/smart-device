@@ -12,6 +12,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  user-select: none;
 
   &--transparent-white {
     padding: 10px 22px;

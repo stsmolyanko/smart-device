@@ -56,7 +56,7 @@
         </button>
       </div>
     </header>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Smart Device - Главная</h1>
       <section class="promo">
         <div class="container">
@@ -70,7 +70,7 @@
         <h2 class="visually-hidden">Блок преимуществ</h2>
         <div class="container">
           <ul class="features__list">
-            <li class="features__item" tabindex="0">
+            <li class="features__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite.svg#fast"></use>
               </svg>
@@ -78,7 +78,7 @@
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
             </li>
 
-            <li class="features__item" tabindex="0">
+            <li class="features__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite.svg#suppliers"></use>
               </svg>
@@ -86,7 +86,7 @@
               <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
 
-            <li class="features__item" tabindex="0">
+            <li class="features__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite.svg#confidential"></use>
               </svg>
@@ -94,7 +94,7 @@
               <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
             </li>
 
-            <li class="features__item" tabindex="0">
+            <li class="features__item">
               <svg width="35" height="35">
                 <use xlink:href="img/sprite.svg#price"></use>
               </svg>
@@ -167,7 +167,7 @@
 
             <form class="contacts__form" action="https://echo.htmlacademy.ru/">
               <input name="name" type="text" placeholder="Имя" required>
-              <input class="phone-input" name="phone" type="tel" placeholder="Телефон" required>
+              <input class="phone-input" name="phone" type="tel" placeholder="Телефон" min="16" minlength="16" required>
               <textarea name="question" placeholder="Ваш вопрос"></textarea>
 
               <div class="contacts__form-wrapper">

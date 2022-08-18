@@ -187,6 +187,7 @@
   position: absolute;
   top: 28px;
   right: 34px;
+  margin-bottom: 0;
   opacity: 0;
 }
 
@@ -197,6 +198,7 @@
 .contacts__form label {
   position: relative;
   width: 49%;
+  align-self: flex-start;
   margin-top: 15px;
   padding-left: 45px;
   color: $color-default-white;
