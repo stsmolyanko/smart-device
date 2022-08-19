@@ -46,7 +46,13 @@
 
   @include vp-767 {
     min-height: 325px;
-    padding: 29px 25px 72px;
+    padding: 29px 32px 55px 25px;
+  }
+}
+
+.features__item--fast {
+  @include vp-767 {
+    padding-bottom: 72px;
   }
 }
 

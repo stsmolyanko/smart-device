@@ -2061,7 +2061,11 @@ button,
 
   .features__item {
     min-height: 325px;
-    padding: 29px 25px 72px;
+    padding: 29px 32px 55px 25px;
+  }
+
+  .features__item--fast {
+    padding-bottom: 72px;
   }
 
   .features__item svg {
