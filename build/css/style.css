@@ -1176,6 +1176,7 @@ button,
 
 .features__item {
   padding: 39px 40px 68px;
+  min-height: 301px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
 }
@@ -1801,6 +1802,7 @@ button,
 
   .features__item {
     padding-bottom: 28px;
+    min-height: 360px;
   }
 
   .features__item svg {
