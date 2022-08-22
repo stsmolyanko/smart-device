@@ -195,10 +195,16 @@
   outline: 1px solid $color-white;
 }
 
+.contacts__form .phone-input-wrong:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+
 .contacts__form label {
   position: relative;
   width: 49%;
   align-self: flex-start;
+  flex-grow: 0;
   margin-top: 15px;
   padding-left: 45px;
   color: $color-default-white;
@@ -207,8 +213,9 @@
   cursor: pointer;
 
   @include vp-1023 {
-    margin-top: 0;
-    width: 50.5%;
+    margin-top: 16px;
+    margin-right: 12%;
+    width: 38.5%;
     top: -5px;
     display: flex;
     align-items: center;
@@ -218,7 +225,7 @@
   @include vp-767 {
     padding-left: 32px;
     margin-top: 12px;
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -233,7 +240,7 @@
   border-radius: 3px;
 
   @include vp-1023 {
-    top: 22px;
+    top: 7px;
   }
 
   @include vp-767 {
@@ -255,7 +262,7 @@
   transform: rotate(45deg);
 
   @include vp-1023 {
-    top: 24px;
+    top: 10px;
   }
 
   @include vp-767 {

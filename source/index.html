@@ -167,7 +167,7 @@
 
             <form class="contacts__form" action="https://echo.htmlacademy.ru/">
               <input name="name" type="text" placeholder="Имя" required>
-              <input class="phone-input" name="phone" type="tel" placeholder="Телефон" min="16" minlength="16" required>
+              <input class="phone-input" data-phone-pattern name="phone" type="tel" placeholder="Телефон" min="16" minlength="16" required>
               <textarea name="question" placeholder="Ваш вопрос"></textarea>
 
               <div class="contacts__form-wrapper">
@@ -292,7 +292,7 @@
 
           <form class="modal__form" action="https://echo.htmlacademy.ru/">
             <input id="modal__input-name" name="name" type="text" placeholder="Имя" required>
-            <input class="phone-input" name="phone" type="tel" placeholder="Телефон" required>
+            <input class="phone-input" data-phone-pattern name="phone" type="tel" placeholder="Телефон" required>
             <textarea name="question" placeholder="Ваш вопрос"></textarea>
             <input class="button button--black" type="submit" value="Отправить">
             <input id="popup-agreement" type="checkbox" required checked>

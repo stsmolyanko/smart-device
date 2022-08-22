@@ -71,6 +71,7 @@ const copyImages = () => {
 
 const copy = () => {
   return gulp.src([
+    '!source/img/sprite/**/*.svg',
     'source/**.html',
     'source/fonts/**',
     'source/img/**',

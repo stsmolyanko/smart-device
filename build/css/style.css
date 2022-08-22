@@ -902,6 +902,11 @@ button,
   outline: 1px solid #f2f5f6;
 }
 
+.modal__form .phone-input-wrong:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+
 .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -997,7 +1002,7 @@ button,
 .social {
   margin: 0;
   padding: 0;
-  max-width: 300px;
+  max-width: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1009,7 +1014,7 @@ button,
   list-style: none;
 }
 
-.social__item:not(:last-child) {
+.social__item {
   margin-right: 25px;
   margin-bottom: 5px;
 }
@@ -1038,9 +1043,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1057,21 +1059,24 @@ button,
   padding: 0;
   margin-right: 5px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 61%;
-  flex: 0 1 61%;
+  -ms-flex: 0 1 38%;
+  flex: 0 1 38%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
 }
 
-.header__list-item:not(:last-child) {
-  margin-right: 20%;
+.header__list-item:not(:nth-child(2n)) {
+  margin-right: 20px;
 }
 
 .header__list svg {
@@ -1100,11 +1105,12 @@ button,
 }
 
 .header__button {
-  margin-left: auto;
-  margin-right: 62px;
+  margin: 5px 62px 5px auto;
+  max-width: 250px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  max-width: 250px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .promo {
@@ -1159,8 +1165,8 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-  grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
   -webkit-column-gap: 28px;
   -moz-column-gap: 28px;
   column-gap: 28px;
@@ -1505,11 +1511,19 @@ button,
   outline: 1px solid #f2f5f6;
 }
 
+.contacts__form .phone-input-wrong:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
+
 .contacts__form label {
   position: relative;
   width: 49%;
   -ms-flex-item-align: start;
   align-self: flex-start;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   margin-top: 15px;
   padding-left: 45px;
   color: #ffffff;
@@ -1722,6 +1736,10 @@ button,
     padding: 0 50px;
   }
 
+  .social__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
   .header {
     position: relative;
     padding-top: 20px;
@@ -1747,6 +1765,10 @@ button,
 
   .header__list span {
     display: none;
+  }
+
+  .header__list-item:not(:nth-child(2n)) {
+    margin-right: 40px;
   }
 
   .header__button {
@@ -1884,8 +1906,9 @@ button,
   }
 
   .contacts__form label {
-    margin-top: 0;
-    width: 50.5%;
+    margin-top: 16px;
+    margin-right: 12%;
+    width: 38.5%;
     top: -5px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1897,11 +1920,11 @@ button,
   }
 
   .contacts__form-wrapper input[type="checkbox"] + label::before {
-    top: 22px;
+    top: 7px;
   }
 
   .contacts__form-wrapper input[type="checkbox"]:checked + label::after {
-    top: 24px;
+    top: 10px;
   }
 
   .footer {
@@ -2019,10 +2042,6 @@ button,
   .header__list {
     margin-top: 5px;
     padding-right: 15px;
-  }
-
-  .header__list-item:not(:last-child) {
-    margin-right: 19%;
   }
 
   .promo .container {
@@ -2206,7 +2225,7 @@ button,
   .contacts__form label {
     padding-left: 32px;
     margin-top: 12px;
-    width: 100%;
+    width: auto;
   }
 
   .contacts__form-wrapper input[type="checkbox"] + label::before {

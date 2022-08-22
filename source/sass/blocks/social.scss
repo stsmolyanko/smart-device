@@ -1,16 +1,22 @@
 .social {
   margin: 0;
   padding: 0;
-  max-width: 300px;
+  max-width: 190px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   list-style: none;
 }
 
-.social__item:not(:last-child) {
+.social__item {
   margin-right: 25px;
   margin-bottom: 5px;
+}
+
+.social__item:nth-child(3n) {
+  @include vp-1023 {
+    margin-right: 0;
+  }
 }
 
 .social__link svg {

@@ -224,3 +224,8 @@
 .modal__form input[type="checkbox"]:focus-visible + label {
   outline: 1px solid $color-white;
 }
+
+.modal__form .phone-input-wrong:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}
